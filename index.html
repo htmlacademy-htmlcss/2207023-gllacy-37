@@ -8,6 +8,7 @@
     <meta name="description" content="Магазин Глейси – это онлайн и офлайн-магазин по продаже мороженого собственного производства на развес">
     <link rel="stylesheet" href="styles/styles.css">
   </head>
+  <!-- изменение цвета фона классами page--pink, page--blue и page--yellow -->
   <body class="page page--pink">
     <header class="page__header header">
       <a class="header__logo logo">
@@ -243,25 +244,49 @@
             </li>
           </ul>
           <div class="hero-slider__image-wrapper">
-            <button class="hero-slider__button button button--small button--prev" type="button">
-              <span class="visually-hidden">
-                Предыдущий вкус.
-              </span>
-            </button>
-            <button class="hero-slider__button button button--small button--next" type="button">
-              <span class="visually-hidden">
-                Следующий вкус.
-              </span>
-            </button>
-            <ul class="hero-slider__image-list">
+            <div class="hero-slider__general-image">
+              <button class="hero-slider__button button button--small button--prev" type="button">
+                <span class="visually-hidden">
+                  Предыдущий вкус.
+                </span>
+              </button>
+              <button class="hero-slider__button button button--small button--next" type="button">
+                <span class="visually-hidden">
+                  Следующий вкус.
+                </span>
+              </button>
+              <ul class="hero-slider__image-list">
+                <li class="hero-slider__image-item active">
+                  <img class="hero-slider__image" src="images/slider/strawberry.png" width="327" height="507" alt="Нежный пломбир с клубничным джемом.">
+                </li>
+                <li class="hero-slider__image-item">
+                  <img class="hero-slider__image" src="images/slider/banana.png" width="312" height="507" alt="Сливочное мороженое со вкусом банана.">
+                </li>
+                <li class="hero-slider__image-item">
+                  <img class="hero-slider__image" src="images/slider/caramel.png" width="350" height="507" alt="Карамельный пломбир с маршмеллоу">
+                </li>
+              </ul>
+            </div>
+            <ul class="hero-slider__small-image-list">
+              <li class="hero-slider__small-image-item active">
+                <img class="hero-slider__image" src="images/slider/banana-small.png" width="66" height="150" alt="Сливочное мороженое со вкусом банана.">
+              </li>
+              <li class="hero-slider__image-item">
+                <img class="hero-slider__image" src="images/slider/caramel-small.png" width="66" height="150" alt="Карамельный пломбир с маршмеллоу">
+              </li>
+              <li class="hero-slider__small-image-item">
+                <img class="hero-slider__image" src="images/slider/strawberry-small.png" width="66" height="150" alt="Нежный пломбир с клубничным джемом.">
+              </li>
+            </ul>
+            <ul class="hero-slider__small-image-list">
               <li class="hero-slider__image-item active">
-                <img class="hero-slider__image" src="images/slider/strawberry.png" width="327" height="507" alt="Нежный пломбир с клубничным джемом.">
+                <img class="hero-slider__image" src="images/slider/caramel-small.png" width="66" height="150" alt="Карамельный пломбир с маршмеллоу">
               </li>
-              <li class="hero-slider__image-item">
-                <img class="hero-slider__image" src="images/slider/banana.png" width="350" height="507" alt="Сливочное мороженое со вкусом банана.">
+              <li class="hero-slider__small-image-item">
+                <img class="hero-slider__image" src="images/slider/strawberry-small.png" width="66" height="150" alt="Нежный пломбир с клубничным джемом.">
               </li>
-              <li class="hero-slider__image-item">
-                <img class="hero-slider__image" src="images/slider/caramel.png" width="350" height="507" alt="Карамельный пломбир с маршмеллоу">
+              <li class="hero-slider__small-image-item">
+                <img class="hero-slider__image" src="images/slider/banana-small.png" width="66" height="150" alt="Сливочное мороженое со вкусом банана.">
               </li>
             </ul>
           </div>

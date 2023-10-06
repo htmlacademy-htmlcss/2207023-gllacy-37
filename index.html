@@ -84,11 +84,11 @@
         </a>
         <div class="login__popup">
           <form class="login__form login-form" action="https://echo.htmlacademy.ru/" method="post">
-            <legend class="login-form__name">
+            <label class="login-form__name">
               Личный кабинет
-            </legend>
+            </label>
             <label class="login-form__wrap">
-              <input class="login-form__input login-form__input--email" type="email" placeholder="Введите ваш e-mail" value="email@example.com" name="email" required>
+              <input class="login-form__input login-form__input--email" type="email" placeholder="Введите ваш e-mail" value="email@example.com" name="email-login" required>
             </label>
             <label class="login-form__wrap">
               <input class="login-form__input login-form__input--password" type="password" placeholder="Введите ваш пароль" value="123456" name="password" required>
@@ -294,21 +294,21 @@
         <footer class="hero-slider__footer slider-footer">
           <ul class="slider-footer__pagination slider-pagination">
             <li class="slider-pagination__item active">
-              <button class="slider-pagination__button pagination-button" type="button">
+              <button class="slider-pagination__button slider-pagination-button" type="button">
                 <span class="visually-hidden">
                   Показать слайд 1.
                 </span>
               </button>
             </li>
             <li class="slider-pagination__item">
-              <button class="slider-pagination__button pagination-button" type="button">
+              <button class="slider-pagination__button slider-pagination-button" type="button">
                 <span class="visually-hidden">
                   Показать слайд 2.
                 </span>
               </button>
             </li>
             <li class="slider-pagination__item">
-              <button class="slider-pagination__button pagination-button" type="button">
+              <button class="slider-pagination__button slider-pagination-button" type="button">
                 <span class="visually-hidden">
                   Показать слайд 3.
                 </span>
@@ -541,7 +541,7 @@
             </p>
             <form class="subscribe__form" action="https://echo.htmlacademy.ru/" method="get">
               <label class="subscribe__input-wrap">
-                <input class="subscribe__input" type="email" placeholder="email@example.com" name="email" required>
+                <input class="subscribe__input" type="email" placeholder="email@example.com" name="email-subscribe" required>
               </label>
               <button class="subscribe__button button button--special">
                 Отправить
@@ -565,10 +565,21 @@
           </p>
           <form class="delivery__form delivery-form" action="https://echo.htmlacademy.ru/" method="get">
             <div class="delivery-form__group">
-              <label class="delivery-form__input-title input-title" for="date-delivery">
-                Дата
-              </label>
-              <!-- тут будет tooltip -->
+              <div class="delivery-form__label-wrap">
+                <label class="delivery-form__input-title input-title" for="date-delivery">
+                  Дата
+                </label>
+                <div class="delivery-form__tooltip tooltip">
+                  <button class="tooltip__button">
+                    <span class="visually-hidden">
+                      Больше информации.
+                    </span>
+                  </button>
+                  <p class="tooltip__text">
+                    Введите дату доставки
+                  </p>
+                </div>
+              </div>
               <input class="delivery-form__input input-date" type="text" placeholder="01.04.2020" name="date-delivery" id="date-delivery" required>
             </div>
             <div class="delivery-form__group">
@@ -578,10 +589,21 @@
               <input class="delivery-form__input input-phone" type="tel" placeholder="+7 800 999-00-00" name="phone-delivery" id="phone-delivery" required>
             </div>
             <div class="delivery-form__group">
-              <label class="delivery-form__input-title input-title" for="address-delivery">
-                Адрес
-              </label>
-              <!-- тут будет tooltip -->
+              <div class="delivery-form__label-wrap">
+                <label class="delivery-form__input-title input-title" for="address-delivery">
+                  Адрес
+                </label>
+                <div class="delivery-form__tooltip tooltip">
+                  <button class="tooltip__button">
+                    <span class="visually-hidden">
+                      Больше информации.
+                    </span>
+                  </button>
+                  <p class="tooltip__text">
+                    Введите название улицы, дома и квартиры
+                  </p>
+                </div>
+              </div>
               <input class="delivery-form__input input-address" type="text" placeholder="ул. Большая Конюшенная, 19/8" name="address-delivery" id="address-delivery" required>
             </div>
             <button class="delivery-form__button button button--special">
@@ -610,7 +632,7 @@
           <span class="contacts__work-time">
             (с 10 до 20 ежедневно)
           </span>
-          <a class="contacts__button button button--special" href="#">
+          <a class="contacts__button button button--special" onclick="window.myDialog.showModal();">
             Форма обратной связи
           </a>
         </div>
@@ -683,6 +705,26 @@
         </p>
       </div>
     </footer>
-    <!-- тут будет popup формы обратной связи -->
+    <dialog class="popup-feedback" id="myDialog">
+      <h2 class="visually-hidden">
+        Форма обратной связи.
+      </h2>
+      <h3 class="popup-feedback__title">
+        Мы обязательно ответим вам!
+      </h3>
+      <button class="popup-feedback__button-close" onclick="window.myDialog.close();" type="button" title="Закрыть окно">
+        <span class="visually-hidden">
+          Закрыть окно.
+        </span>
+      </button>
+      <form class="popup-feedback__form-feedback form-feedback" action="https://echo.htmlacademy.ru/" method="get">
+        <input class="form-feedback__input-popup input-popup input-popup--name" type="text" placeholder="Имя и фамилия" name="name" required>
+        <input class="form-feedback__input-popup input-popup input-popup--email" type="email" placeholder="email@example.com" name="email-feedback" required>
+        <textarea class="form-feedback__input-popup input-popup input-popup--text" placeholder="В свободной форме" name="feedback" required></textarea>
+        <button class="form-feedback__button button button--special" type="submit">
+          Отправить
+        </button>
+      </form>
+    </dialog>
   </body>
 </html>

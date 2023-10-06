@@ -83,9 +83,9 @@
         </a>
         <div class="login__popup">
           <form class="login__form login-form" action="https://echo.htmlacademy.ru/" method="post">
-            <legend class="login-form__name">
+            <label class="login-form__name">
               Личный кабинет
-            </legend>
+            </label>
             <label class="login-form__wrap">
               <input class="login-form__input login-form__input--email" type="email" placeholder="Введите ваш e-mail" value="email@example.com" name="email" required>
             </label>
@@ -213,7 +213,7 @@
           </li>
           <li class="breadcrumds__item breadcrumds__item--current-page">
             <a class="breadcrumds__link">
-              Сливочное мороженное
+              Сливочное мороженое
             </a>
           </li>
         </ul>
@@ -222,7 +222,131 @@
         Сливочное мороженое
       </h1>
       <section class="catalog-page__filter-catalog filter-catalog">
-<!-- фильтр -->
+        <h2 class="visually-hidden">
+          Фильтры каталога.
+        </h2>
+        <form class="filter-catalog__filter-form filter-form" action="https://echo.htmlacademy.ru/" method="get">
+          <fieldset class="filter-form__group">
+            <legend class="filter-form__title">
+              Сортировка:
+            </legend>
+            <select class="filter-form__select" name="filter">
+              <option value="popular">
+                по популярности
+              </option>
+              <option value="expensive">
+                сначала дорогие
+              </option>
+              <option value="cheap">
+                сначала дешевые
+              </option>
+            </select>
+          </fieldset>
+          <fieldset class="filter-form__group">
+            <legend class="filter-form__title">
+              Цена:
+              <span class="min-price">
+                100
+              </span>
+              ₽ -
+              <span class="max-price">
+                500
+              </span>
+              ₽
+            </legend>
+            <div class="filter-form__range range">
+              <div class="range__scale">
+                <div class="range__bar" style="left: 32px; width: 72px;">
+                  <div class="range__toggle toggle--min">
+                    <button class="toggle__button" type="button" name="range-min">
+                      <span class="visually-hidden">
+                        Изменить минимальную цену.
+                      </span>
+                    </button>
+                  </div>
+                  <div class="range__toggle toggle--max">
+                    <button class="toggle__button" type="button" name="range-max">
+                      <span class="visually-hidden">
+                        Изменить максимальную цену.
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="filter-form__group">
+            <legend class="filter-form__title">
+              Жирность:
+            </legend>
+            <div class="filter-form__wrap">
+              <label class="filter-form__label">
+                <input class="visually-hidden filter-form__radio" type="radio" name="fat-content" value="0%">
+                <span class="filter-form__label-text">
+                  0%
+                </span>
+              </label>
+              <label class="filter-form__label">
+                <input class="visually-hidden filter-form__radio" type="radio" name="fat-content" value="0% - 10%" checked>
+                <span class="filter-form__label-text">
+                  до 10%
+                </span>
+              </label>
+              <label class="filter-form__label">
+                <input class="visually-hidden filter-form__radio" type="radio" name="fat-content" value="0% - 30%">
+                <span class="filter-form__label-text">
+                  до 30%
+                </span>
+              </label>
+              <label class="filter-form__label">
+                <input class="visually-hidden filter-form__radio" type="radio" name="fat-content" value="30%+">
+                <span class="filter-form__label-text">
+                  выше 30%
+                </span>
+              </label>
+            </div>
+          </fieldset>
+          <fieldset class="filter-form__group">
+            <legend class="filter-form__title">
+              Наполнители:
+            </legend>
+            <div class="filter-form__wrap">
+              <label class="filter-form__label">
+                <input class="visually-hidden filter-form__checkbox" type="checkbox" name="chocolate-filler" checked>
+                <span class="filter-form__label-text">
+                  шоколадные
+                </span>
+              </label>
+              <label class="filter-form__label">
+                <input class="visually-hidden filter-form__checkbox" type="checkbox" name="sugar-sprinkles-filler" checked>
+                <span class="filter-form__label-text">
+                  сахарные посыпки
+                </span>
+              </label>
+              <label class="filter-form__label">
+                <input class="visually-hidden filter-form__checkbox" type="checkbox" name="fruits-filler">
+                <span class="filter-form__label-text">
+                  фрукты
+                </span>
+              </label>
+              <label class="filter-form__label">
+                <input class="visually-hidden filter-form__checkbox" type="checkbox" name="syrups-filler">
+                <span class="filter-form__label-text">
+                  сиропы
+                </span>
+              </label>
+              <label class="filter-form__label">
+                <input class="visually-hidden filter-form__checkbox" type="checkbox" name="jams-filler">
+                <span class="filter-form__label-text">
+                  джемы
+                </span>
+              </label>
+            </div>
+          </fieldset>
+          <button class="filter-catalog__button button button--small" type="submit">
+            Применить
+          </button>
+        </form>
       </section>
       <section class="catalog-page__catalog-result catalog-result">
       <ul class="catalog">
@@ -381,7 +505,7 @@
             </a>
           </h3>
           <p class="product__description">
-            Сливочный пломбир с банановым вкусом
+            Сливочный пломбир с&nbsp;банановым вкусом
           </p>
           <div class="product__footer">
             <p class="product__price price">
@@ -439,7 +563,7 @@
             </a>
           </h3>
           <p class="product__description">
-            Сливочный пломбир с клубничным вкусом
+            Сливочный пломбир с&nbsp;клубничным вкусом
           </p>
           <div class="product__footer">
             <p class="product__price price">
@@ -497,7 +621,7 @@
             </a>
           </h3>
           <p class="product__description">
-            Сливочный пломбир с ментоловым сиропом
+            Сливочный пломбир с&nbsp;ментоловым сиропом
           </p>
           <div class="product__footer">
             <p class="product__price price">
@@ -555,7 +679,7 @@
             </a>
           </h3>
           <p class="product__description">
-            Классическое крем-брюле
+            Классическое<br>крем-брюле
           </p>
           <div class="product__footer">
             <p class="product__price price">
@@ -577,7 +701,66 @@
       </ul>
     </section>
     <section class="main__pagination pagination">
-
+      <h2 class="visually-hidden">
+        Страницы каталога.
+      </h2>
+      <a class="pagination__button button more-page-button" href="#">
+        Показать еще
+      </a>
+      <div class="pagination__container">
+        <a class="pagination-button pagination-button--prev pagination-button--no-pages">
+          <span class="visually-hidden">
+            Показать предыдущую страницу.
+          </span>
+        </a>
+        <ul class="pagination__list">
+          <li class="pagination__item">
+            <a class="pagination__link pagination__link--current-page">
+              <span class="visually-hidden">
+                Перейти на страницу
+              </span>
+              1
+            </a>
+          </li>
+          <li class="pagination__item">
+            <a class="pagination__link" href="#">
+              <span class="visually-hidden">
+                Перейти на страницу
+              </span>
+              2
+            </a>
+          </li>
+          <li class="pagination__item">
+            <a class="pagination__link" href="#">
+              <span class="visually-hidden">
+                Перейти на страницу
+              </span>
+              3
+            </a>
+          </li>
+          <li class="pagination__item">
+            <a class="pagination__link" href="#">
+              <span class="visually-hidden">
+                Перейти на страницу
+              </span>
+              4
+            </a>
+          </li>
+          <li class="pagination__item">
+            <a class="pagination__link" href="#">
+              <span class="visually-hidden">
+                Перейти на страницу
+              </span>
+              5
+            </a>
+          </li>
+        </ul>
+        <a class="pagination-button pagination-button--next" href="#">
+          <span class="visually-hidden">
+            Показать следующую страницу.
+          </span>
+        </a>
+      </div>
     </section>
     </main>
     <footer class="page__footer footer catalog-footer">
@@ -647,6 +830,5 @@
         </p>
       </div>
     </footer>
-    <!-- тут будет popup формы обратной связи -->
   </body>
 </html>
